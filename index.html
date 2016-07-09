@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    	<meta name="author" content="SemiColonWeb" />
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="jquery-1.11.3.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!--[if lt IE 9]>
+        	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+
+        <!-- Document Title
+        ============================================= -->
+    	<title>Gladys Pichollet</title>
+
+    </head>
+
+    <body class="stretched index">
+        <header id="header">
+            <div class="logo">
+                <img src="images/logo.png">
+                <div class="name">
+                    <p id="name">GLADYS PICHOLLET</p>
+                    <p id="job">Graphic Designer</p>
+                </div>
+            </div>
+            <nav id="menu">        
+                <ul>
+                    <li><a href="CV.pdf" target="_blank">CV</a></li>
+                    <li><a href="#headline2" class="panel">CONTACT</a></li>
+                    <li><a href="#headline1" class="panel">PROJETS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="content">
+            <section id="slideshow">       
+                <div class="container">
+                    <div class="c_slider"></div>
+                        <div class="slider">
+                            <figure>
+                                <img src="images/slideshow/1.jpg" alt="" width="1672" height="694" />
+                            </figure><!--
+                            --><figure>
+                                <img src="images/slideshow/2.jpg" alt="" width="1672" height="694" />
+                            </figure><!--
+                            --><figure>
+                                <img src="images/slideshow/3.jpg" alt="" width="1672" height="694" />
+                            </figure><!--
+                            --><figure>
+                                <img src="images/slideshow/4.jpg" alt="" width="1672" height="694" />
+                            </figure><!--
+                            --><figure>
+                                <img src="images/slideshow/5.jpg" alt="" width="1672" height="694" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>                  
+            </section>
+            <div class="blank"></div>
+            <div class="presentation">
+                <h1>QUI SUIS-JE ?</h1>
+                <p class="justify">Je m’appelle Gladys Pichollet.
+J’ai 20 ans, titulaire d’un CAP dessinateur d’exécution en communication graphique et d’un BAC pro artisanat des métiers d’art option communication graphique, j’étudie actuellement en deuxième année à l’école E-artsup afin d’enrichir et diversifier mes compétences en matière de communication graphique.
+La formation variée m’a appris à devenir polyvalente aussi bien en « print » qu’en photographie, web design ou motion design, même si mes compétences et ma motivation m’orientent plutôt vers le secteur du « print ».
+Rigoureuse et minutieuse c’est avec plaisir et passion que réalise mes projets.
+            </div>
+            <div id="headline1" class="projet panel">
+                <a href="projet3.html"><img id="p3" src="images/projet/3.png"></a>
+                <a href="projet7.html"><img id="p7" src="images/projet/7.png"></a>
+                <a href="projet2.html"><img id="p2" src="images/projet/2.png"></a>
+                <a href="projet1.html"><img id="p1" src="images/projet/1.png"></a>
+                <a href="projet8.html"><img id="p8" src="images/projet/8.png"></a>
+                <a href="projet9.html"><img id="p9" src="images/projet/9.png"></a>
+                <a href="projet5.html"><img id="p5" src="images/projet/5.png"></a>
+                <a href="projet5.html" id="linkcover5"><img></a>
+                <a href="projet4.html"><img id="p4" src="images/projet/4.png"></a>
+                <a href="projet10.html"><img id="p10" src="images/projet/10.png"></a>
+                <a href="projet6.html"><img id="p6" src="images/projet/6.png"></a>
+                <a href="projet11.html"><img id="p11" src="images/projet/11.png"></a>
+                <div class="contact">
+                    <img src="images/contact_border.png">
+                    <p id="graphic_designer">Graphic Designer</p>
+                    <h2 id="headline2" class="panel">Gladys Pichollet</h2>
+                    <p id="mail">gladyspichollet@gmail.com</p>
+                    <img id="bottom" src="images/contact_border.png">
+                </div>
+            </div>
+        </section>
+    </body>
+    <script type="text/javascript">$.fn.strech_text = function(){
+    var elmt          = $(this),
+        cont_width    = elmt.width(),
+        txt           = elmt.html(),
+        one_line      = $('<span class="stretch_it">' + txt + '</span>'),
+        nb_char       = elmt.text().length,
+        spacing       = cont_width/nb_char,
+        txt_width;
+
+    elmt.html(one_line);
+    txt_width = one_line.width();
+
+    if (txt_width < cont_width){
+        var  char_width     = txt_width/nb_char,
+             ltr_spacing    = spacing - char_width + (spacing - char_width)/nb_char ; 
+
+        one_line.css({'letter-spacing': ltr_spacing});
+    } else {
+        one_line.contents().unwrap();
+        elmt.addClass('justify');
+    }
+};</script>
+</html>
